@@ -27,7 +27,7 @@ export const WORK = [
     aspect: 'vertical',
     featured: true,
     featuredTreatment: 'premium',
-    src: '/Shorts/Watch%20society.mp4',
+    src: 'https://pub-1e3a9218b53f4a3585505754ba50ba96.r2.dev/Shorts/Watch%20society.mp4',
     poster: '/Shorts/watch_society_short_form.png',
   },
   {
@@ -38,7 +38,7 @@ export const WORK = [
     aspect: 'vertical',
     featured: true,
     featuredTreatment: 'editorial',
-    src: '/Shorts/Property%20KratZ.mp4',
+    src: 'https://pub-1e3a9218b53f4a3585505754ba50ba96.r2.dev/Shorts/Property%20KratZ.mp4',
     poster: '/Shorts/property_kratz_short_form.png',
   },
   {
@@ -49,7 +49,7 @@ export const WORK = [
     aspect: 'landscape',
     featured: true,
     featuredTreatment: 'cinematic',
-    src: '/Shorts/Archit%20x%20INSO.mp4',
+    src: 'https://pub-1e3a9218b53f4a3585505754ba50ba96.r2.dev/Shorts/Archit%20x%20INSO.mp4',
     poster: '/posters/archit_x_inso_short_form.png',
   },
   {
@@ -59,7 +59,7 @@ export const WORK = [
     category: 'Talking Head · Brand',
     aspect: 'vertical',
     featured: false,
-    src: '/Shorts/Jason%20Watson.mp4',
+    src: 'https://pub-1e3a9218b53f4a3585505754ba50ba96.r2.dev/Shorts/Jason%20Watson.mp4',
     poster: '/Shorts/jason_watson_short_form.png',
   },
   {
@@ -69,7 +69,7 @@ export const WORK = [
     category: 'Editorial · Captions',
     aspect: 'vertical',
     featured: false,
-    src: '/Shorts/Saul%20Paul.mp4',
+    src: 'https://pub-1e3a9218b53f4a3585505754ba50ba96.r2.dev/Shorts/Saul%20Paul.mp4',
     poster: '/Shorts/saul_paul_short_form.png',
   },
 ]
