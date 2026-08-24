@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pratham Tiwari — Video Editor. Short-form storytelling, pacing, captions, and visual polish."
+    />
+    <title>Pratham Tiwari — Video Editor</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="is-booting">
+    <div class="boot-snap" aria-hidden="true"></div>
+    <div class="cut-flash" id="cutFlash" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__core"></span>
+      <span class="cursor__ring"></span>
+    </div>
+    <div class="cursor-label" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <a class="nav__logo" href="#top" data-magnetic>PORTFOLIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#selected">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav__cta" href="#contact" data-magnetic>Let's Work</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="nav-drawer" id="navDrawer" aria-hidden="true" hidden>
+      <a href="#selected">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-drawer__cta" href="#contact">Let's Work</a>
+    </div>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__media">
+          <video
+            id="heroVideo"
+            class="hero__video"
+            muted
+            loop
+            playsinline
+            autoplay
+            preload="auto"
+            poster="/posters/watch-society.jpg"
+            disablepictureinpicture
+            aria-label="Watch Society — hero reel, muted"
+          >
+            <source src="/Shorts/Watch%20society.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__veil"></div>
+        </div>
+
+        <button
+          type="button"
+          class="hero__sound"
+          id="heroSound"
+          aria-pressed="false"
+          aria-label="Unmute hero video"
+        >
+          <span class="hero__sound-icon" aria-hidden="true">🔇</span>
+          <span class="hero__sound-text">SOUND OFF</span>
+        </button>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal" data-reveal>Video Editor</p>
+          <h1 class="hero__title">
+            <span class="reveal" data-reveal>Pratham</span>
+            <span class="reveal" data-reveal>Tiwari</span>
+          </h1>
+          <p class="hero__tagline reveal" data-reveal>
+            Frames with main-character energy.
+          </p>
+          <div class="hero__actions reveal" data-reveal>
+            <a class="btn btn--solid btn--hero" href="#selected" data-magnetic>View Work</a>
+            <a class="btn btn--ghost" href="#contact" data-magnetic>Let's Work</a>
+          </div>
+        </div>
+
+        <a class="hero__scroll" href="#selected" aria-label="Scroll to selected work">
+          <span>Scroll</span>
+          <span class="hero__scroll-line"></span>
+        </a>
+      </section>
+
+      <!-- SELECTED WORK -->
+      <section class="section selected" id="selected" aria-labelledby="selectedHeading">
+        <div class="section__head">
+          <p class="section__index reveal" data-reveal>01 / Selected</p>
+          <h2 class="section__title reveal" data-reveal id="selectedHeading">Selected Work</h2>
+          <p class="section__sub reveal" data-reveal>Three strongest cuts. Tap to watch.</p>
+        </div>
+
+        <div class="selected__list" id="selectedWork"></div>
+      </section>
+
+      <!-- WORK LIBRARY -->
+      <section class="section library" id="work" aria-labelledby="libraryHeading">
+        <div class="section__head">
+          <p class="section__index reveal" data-reveal>02 / Library</p>
+          <h2 class="section__title reveal" data-reveal id="libraryHeading">Work Library</h2>
+        </div>
+
+        <div class="library__block">
+          <div class="library__subhead reveal" data-reveal>
+            <h3 class="library__subtitle">Short Form</h3>
+            <p class="library__subdesc">
+              All short-form edits on the site. Tap any cut to watch.
+            </p>
+          </div>
+          <div class="library__grid" id="workLibrary"></div>
+        </div>
+
+        <div class="library__block library__block--longform" id="longform">
+          <div class="library__subhead reveal" data-reveal>
+            <h3 class="library__subtitle" id="longformHeading">Long Form</h3>
+            <p class="library__subdesc">When the story needs more room.</p>
+          </div>
+          <div class="longform__grid" id="longFormWork"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about" id="about" aria-labelledby="aboutHeading">
+        <div class="section__head">
+          <p class="section__index reveal" data-reveal>03 / About</p>
+          <h2 class="section__title reveal" data-reveal id="aboutHeading">About</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__intro reveal" data-reveal>
+            <p class="about__name">Pratham Tiwari</p>
+            <p class="about__role">Video Editor</p>
+          </div>
+          <div class="about__body reveal" data-reveal>
+            <p>
+              I turn raw footage into edits with a point of view — sharp pacing, clean storytelling, and visuals built to hold attention.
+            </p>
+            <p>
+              Social-first, but never disposable. Every cut, caption, transition, and frame has a reason to be there.
+            </p>
+          </div>
+          <ul class="about__skills reveal" data-reveal>
+            <li>Short-form</li>
+            <li>Storytelling</li>
+            <li>Pace</li>
+            <li>Motion graphics</li>
+            <li>VFX</li>
+            <li>SFX</li>
+            <li>Captions</li>
+            <li>Visual polish</li>
+            <li>Social-first</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact" aria-labelledby="contactHeading">
+        <div class="contact__blast reveal" data-reveal>
+          <p class="section__index">04</p>
+          <h2 class="contact__title" id="contactHeading">Got Footage?</h2>
+          <p class="contact__sub">Let's make it hit.</p>
+          <a class="btn btn--solid btn--xl" id="contactEmailPrimary" href="#" data-magnetic>
+            Email Me
+          </a>
+        </div>
+
+        <div class="contact__links reveal" data-reveal id="contactLinks"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Pratham Tiwari</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <div class="player" id="player" hidden>
+      <div class="player__backdrop" data-player-close></div>
+      <div class="player__shell" role="dialog" aria-modal="true" aria-labelledby="playerTitle">
+        <div class="player__top">
+          <div class="player__heading">
+            <p class="player__kicker" id="playerCat"></p>
+            <h3 class="player__title" id="playerTitle"></h3>
+          </div>
+          <button type="button" class="player__close" data-player-close aria-label="Close player">
+            Close
+          </button>
+        </div>
+
+        <div class="player__stage" id="playerStage">
+          <video
+            id="playerVideo"
+            playsinline
+            preload="auto"
+            muted
+            aria-label="Project video player"
+          ></video>
+          <button type="button" class="player__sound-chip" id="playerSoundChip" hidden>
+            Sound off — tap to unmute
+          </button>
+        </div>
+
+        <div class="player__bar">
+          <button type="button" class="player__btn player__btn--play" id="playerPlay" aria-label="Play">
+            Play
+          </button>
+          <span class="player__state" id="playerState">Paused</span>
+          <span class="player__time" id="playerTime">0:00 / 0:00</span>
+          <input
+            class="player__seek"
+            id="playerSeek"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Seek"
+          />
+          <button type="button" class="player__btn player__btn--mute" id="playerMute" aria-label="Unmute">
+            Unmute
+          </button>
+          <input
+            class="player__vol"
+            id="playerVol"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+            aria-label="Volume"
+          />
+          <button type="button" class="player__btn" id="playerFs" aria-label="Fullscreen">Full</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

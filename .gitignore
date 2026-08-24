@@ -1,0 +1,43 @@
+# Dependencies & tooling
+node_modules
+dist
+.DS_Store
+Thumbs.db
+*.log
+.vite
+.env
+.env.*
+
+# Local analysis leftovers
+_analysis_frames
+
+# ---------------------------------------------------------------------------
+# Large / unused media — files stay on disk, they are not committed
+# ---------------------------------------------------------------------------
+
+# All video masters (short-form + long-form). Host/stream these separately.
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.avi
+
+# Unused long-form source folder (site uses YouTube, not these files)
+LongForm/
+public/LongForm/
+
+# Root Shorts/ is the same folder as public/Shorts (Windows junction).
+# Commit used preview images via public/ only so Vite/Vercel can serve them.
+/Shorts/
+
+# Duplicate unused preview copies (site uses public/posters/ for Archit)
+public/Shorts/archit_x_inso_short_form.png
+public/Shorts/ChatGPT Image Aug 21, 2026, 06_53_23 PM.png
+
+# Legacy unused JPG posters (site no longer references these)
+public/posters/property-by-kazy.jpg
+public/posters/kim-gross.jpg
+public/posters/techwiz.jpg
+public/posters/archit-x-inso.jpg
+public/posters/jason-watson.jpg
+public/posters/saul-paul.jpg
