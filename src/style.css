@@ -438,8 +438,8 @@ body.has-cursor .cursor-label.is-on {
 
 .nav__toggle {
   justify-self: end;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: grid;
   place-content: center;
   gap: 6px;
@@ -497,6 +497,9 @@ body.has-cursor .cursor-label.is-on {
 }
 
 .nav-drawer a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-display);
   font-size: clamp(2rem, 10vw, 3.5rem);
   font-weight: 700;
