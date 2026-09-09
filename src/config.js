@@ -94,7 +94,7 @@ export const LONG_FORM = [
     category: 'Long-form Edit',
     description:
       'A longer-form cut focused on rhythm, structure, and keeping the story moving.',
-    url: 'https://youtu.be/XSDmPnd7Aeg',
+    url: 'https://youtu.be/pOKK57pwK-w',
     aspect: 'landscape',
     poster: '/posters/techwiz_preview.png',
   },
